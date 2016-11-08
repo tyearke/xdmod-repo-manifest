@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote
+        name="ubccr"
+        alias="upstream"
+        fetch="ssh://git@github.com/ubccr"
+    />
+    <default
+        remote="ubccr"
+        revision="xdmod6.5"
+    />
+
+    <!--
+    XDMoD and Main Modules
+
+    These are the core projects developed by the XDMoD team.
+    They will be installed by default.
+    -->
+    <project
+        name="xdmod"
+        groups="xdmod,appkernels,supremm,xsede"
+    />
+    <project
+        name="xdmod-appkernels"
+        groups="appkernels,xsede"
+    >
+        <linkfile src="." dest="xdmod/open_xdmod/modules/appkernels" />
+    </project>
+    <project
+        name="xdmod-supremm"
+        groups="supremm,xsede"
+    >
+        <linkfile src="." dest="xdmod/open_xdmod/modules/supremm" />
+    </project>
+
+    <!--
+    XSEDE Module
+
+    This is not intended for use outside of XSEDE.
+    It will not be installed by default.
+    -->
+    <project
+        name="xdmod-xsede"
+        groups="notdefault,xsede"
+    >
+        <linkfile src="." dest="xdmod/open_xdmod/modules/xsede" />
+    </project>
+
+    <!--
+    Related Tools
+
+    These projects are tools used by Open XDMoD but are not part of it.
+    They are included for convenience, but they are not installed by default.
+    -->
+    <project
+        name="supremm"
+        groups="notdefault,supremm,tools"
+        revision="master"
+    />
+    <project
+        name="akrr"
+        groups="notdefault,appkernels,tools"
+        revision="master"
+    />
+</manifest>
