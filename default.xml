@@ -46,7 +46,7 @@
     -->
     <project
         name="xdmod-xsede"
-        groups="notdefault,xsede"
+        groups="xsede"
     >
         <linkfile src="." dest="xdmod/open_xdmod/modules/xsede" />
     </project>
