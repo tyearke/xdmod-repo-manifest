@@ -5,9 +5,14 @@
         alias="upstream"
         fetch="ssh://git@github.com/ubccr"
     />
+    <remote
+        name="tyearke"
+        alias="origin"
+        fetch="ssh://git@github.com/tyearke"
+    />
     <default
-        remote="ubccr"
-        revision="xdmod6.5"
+        remote="tyearke"
+        revision="test"
     />
 
     <!--
