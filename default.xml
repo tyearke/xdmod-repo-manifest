@@ -5,8 +5,13 @@
         alias="upstream"
         fetch="ssh://git@github.com/ubccr"
     />
+    <remote
+        name="tyearke"
+        alias="origin"
+        fetch="ssh://git@github.com/tyearke"
+    />
     <default
-        remote="ubccr"
+        remote="tyearke"
         revision="xdmod6.5"
     />
 
@@ -37,6 +42,16 @@
         groups="supremm"
     >
         <linkfile src="." dest="xdmod/open_xdmod/modules/supremm" />
+    </project>
+
+    <!--
+    XSEDE Module
+    -->
+    <project
+        name="xdmod-xsede"
+        groups="xsede"
+    >
+        <linkfile src="." dest="xdmod/open_xdmod/modules/xsede" />
     </project>
 
     <!--
